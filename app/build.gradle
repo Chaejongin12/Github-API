@@ -7,6 +7,11 @@ plugins {
 
 
 android {
+
+    buildFeatures{
+        dataBinding true
+    }
+
     namespace 'com.example.msg_assignment'
     compileSdk 33
 
@@ -43,6 +48,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
 
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
