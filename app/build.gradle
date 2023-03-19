@@ -53,4 +53,5 @@ dependencies {
      androidTestAnnotationProcessor 'com.google.dagger:hilt-compiler:2.45'
      implementation 'com.google.dagger:hilt-android:2.45'
      annotationProcessor 'com.google.dagger:hilt-compiler:2.45'
+
 }
