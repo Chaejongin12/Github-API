@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-    fun button_click(view: View) {
+    fun ClickButton(view: View) {
         val username = binding.editText.text.toString()
         if (username.isNotEmpty()) {
             val intent = Intent(this, UserInfoActivity::class.java).apply {
