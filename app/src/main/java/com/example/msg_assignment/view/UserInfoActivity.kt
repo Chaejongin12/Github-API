@@ -20,6 +20,7 @@ class UserInfoActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         viewModel.userInfo.observe(this){
+            println("안녕 $it")
             Glide.with(this).load(it.userProfile).into(binding.userProfile)
             binding.userId.text = it.userId
             binding.userName.text = it.userName

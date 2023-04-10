@@ -15,17 +15,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+    }
 
-        binding.searchButton.setOnClickListener {
-            val username = binding.editText.text.toString()
-            if (username.isNotEmpty()) {
-                val intent = Intent(this, UserInfoActivity::class.java).apply {
-                    putExtra("userName", username)
-                }
-                startActivity(intent)
-            } else {
-                Toast.makeText(this, "유저이름을 입력하세요", Toast.LENGTH_SHORT).show()
+    fun button_click(view: View) {
+        val username = binding.editText.text.toString()
+        if (username.isNotEmpty()) {
+            val intent = Intent(this, UserInfoActivity::class.java).apply {
+                putExtra("userName", username)
             }
+            startActivity(intent)
+        } else {
+            Toast.makeText(this, "유저이름을 입력하세요", Toast.LENGTH_SHORT).show()
         }
     }
 

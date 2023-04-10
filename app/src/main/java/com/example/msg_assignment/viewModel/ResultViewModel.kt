@@ -18,9 +18,13 @@ class ResultViewModel : ViewModel(){
 
     fun searchUser(userName: String){
         viewModelScope.launch {
-            val response = GithubApi.searchUser(userName)
-            if (response.body() != null) {
-                _userInfo.value = response.body()
+            kotlin.runCatching {
+                GithubApi.searchUser(userName)
+            }.onSuccess {
+                if (it.body() != null) {
+                    _userInfo.value = it.body()
+                }
+            }.onFailure {
             }
         }
     }
