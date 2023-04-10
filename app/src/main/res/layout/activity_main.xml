@@ -27,7 +27,7 @@
             android:id="@+id/searchButton"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:onClick="button_click"
+            android:onClick="ClickButton"
             android:text="검색"
             app:layout_constraintBottom_toBottomOf="@+id/editText"
             app:layout_constraintEnd_toEndOf="parent" />
